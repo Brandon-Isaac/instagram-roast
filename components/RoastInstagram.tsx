@@ -14,7 +14,7 @@ const InstagramRoaster: React.FC = () => {
     const fetchRoasting = async () => {
         try {
             setLoading(true);
-            setError(''); // Reset error state before making the request
+            setError(''); 
             const response = await axios.post('https://instagram.vercel.app/roasting-instagram', {
                 query,
                 model,
