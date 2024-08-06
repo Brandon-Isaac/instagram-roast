@@ -22,7 +22,7 @@ const InstagramRoaster: React.FC = () => {
             setRoasting(response.data.roasting);
         } catch (error) {
             console.error('Error fetching data:', error);
-            setError('Oops An error occurred while retrieving data! Try again later...');
+            setError('Oops! An error occurred while retrieving data. Please try again later.');
         } finally {
             setLoading(false);
         }
@@ -34,7 +34,7 @@ const InstagramRoaster: React.FC = () => {
                 <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
                     <div className="bg-white p-6 rounded shadow-lg">
                         <h2 className="text-2xl font-bold mb-4">Disclaimer</h2>
-                        <p className="mb-4">Just for fun!! Don't take it to heart!</p>
+                        <p className="mb-4">Just for fun!! Don&apos;t take it to heart!</p>
                         <button
                             className="bg-blue-500 text-white px-4 py-2 rounded"
                             onClick={() => setShowModal(false)}
@@ -65,7 +65,7 @@ const InstagramRoaster: React.FC = () => {
                 onClick={fetchRoasting}
                 disabled={loading}
             >
-                {loading ? 'Loading...' : 'Gass Roasting!'}
+                {loading ? 'Loading...' : 'Get Roasting!'}
             </button>
             {error && (
                 <div className="mt-4 p-4 border border-red-500 rounded bg-red-100 text-red-700">
